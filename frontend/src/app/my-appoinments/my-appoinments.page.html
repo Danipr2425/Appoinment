@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>my-appoinments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let a of appoinments">
+    <ion-label>
+      <h1>{{a.name}}</h1>
+      <p>{{a.day}}</p><p>{{a.time}}</p>
+      <ion-button (click)="deleteAppoinment(a.id)">delete</ion-button>
+      <ion-button (click)="updateAppoinment(a.id)">update</ion-button>
+    </ion-label>
+  </ion-item>
+</ion-content>
