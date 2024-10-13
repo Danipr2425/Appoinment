@@ -1,5 +1,5 @@
-Título del Proyecto
-Acá va un párrafo que describa lo que es el proyecto
+Gestor Citas
+El proyecto se trata de un gestor de citas para llevar el control de una empresa pequeña.
 
 Comenzando 🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
@@ -9,20 +9,19 @@ Mira Deployment para conocer como desplegar el proyecto.
 Pre-requisitos 📋
 Que cosas necesitas para instalar el software y como instalarlas
 
-Da un ejemplo
 Instalación 🔧
-Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose
+Hay que ejecutar node index.js (backend) y ionic serve (frontend)
 
-Dí cómo será ese paso
-
-Da un ejemplo
-Y repite
-
-hasta finalizar
 Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo
 
 Ejecutando las pruebas ⚙️
-Explica como ejecutar las pruebas automatizadas para este sistema
+Para llevar a cabo las pruebas se utlizó la aplicación de POSTMAN. A continuación varios enlaces para la comprobación:
+GET: http://localhost:8080
+POST: http://localhost:8080/api/appoinments
+GET: http://localhost:8080/api/appoinments
+DEL: http://localhost:8080/api/appoinments/2
+PUT: http://localhost:8080/api/appoinments/1
+
 
 Analice las pruebas end-to-end 🔩
 Explica que verifican estas pruebas y por qué

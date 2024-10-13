@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppoinmentService } from '../services/appoinment.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-my-appoinments',
   templateUrl: './my-appoinments.page.html',
@@ -17,6 +18,10 @@ export class MyAppoinmentsPage implements OnInit {
     this.getAllAppoinments();
   }
 
+   ionViewWillEnter() {
+    this.getAllAppoinments();  // Se ejecuta al entrar a la página
+  }
+
   getAllAppoinments(){
     this.appoinmentService.getAppoinments().subscribe(response =>{
       this.appoinments = response;
@@ -29,6 +34,7 @@ export class MyAppoinmentsPage implements OnInit {
     this.getAllAppoinments();
   }
   updateAppoinment(id: any){
+    this.getAllAppoinments();
     this.router.navigate(["/appoinments-form", id]);
   }
 

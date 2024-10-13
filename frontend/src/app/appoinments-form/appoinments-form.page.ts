@@ -41,24 +41,34 @@ export class AppoinmentsFormPage implements OnInit {
   createAppoinment() {
     if (this.appoinmentForm.valid) {
       console.log('Formulario válido:', this.appoinmentForm.value);
-      if(this.appoinmentId !== undefined){
+      
+      // Verifica si existe un appoinmentId para actualizar
+      if (this.appoinmentId !== undefined && this.appoinmentId !== null) {
         this.appoinmentService.update(this.appoinmentForm.value, this.appoinmentId).subscribe(
           response => {
-            console.log(response)
+            console.log(response);
+            
             this.route.navigate(["/my-appoinments"]);
-          },error => {
-            console.log("Error a la hora de modificar el appoinment: " + error)
-          })
+          },
+          error => {
+            console.log("Error a la hora de modificar el appoinment: " + error);
+          }
+        );
+      } else {
+        // Si no hay appoinmentId, creamos una nueva cita
+        this.appoinmentService.create(this.appoinmentForm.value).subscribe(
+          response => {
+            console.log(response);
+            this.route.navigateByUrl("/my-appoinments");
+          },
+          error => {
+            console.log("Error a la hora de crear el appoinment: " + error);
+          }
+        );
       }
     } else {
-      this.appoinmentService.create(this.appoinmentForm.value)
-        .subscribe(
-          response => {
-            console.log(response)
-            this.route.navigateByUrl("/my-appoinments");
-          }, error => {
-            console.log("Error a la hora de crear el appoinment: " + error)
-          })
+      // Si el formulario no es válido
+      console.log("Formulario inválido, por favor revise los campos.");
     }
   }
 
