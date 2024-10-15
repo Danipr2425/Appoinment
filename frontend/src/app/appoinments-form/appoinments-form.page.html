@@ -12,17 +12,19 @@
   </ion-header>
 
   <form [formGroup]="appoinmentForm" (ngSubmit)="createAppoinment()">
-    <ion-button expand="block" (click)="gotoFirstPage()">Back</ion-button>
+    <ion-button class="top10" shape="round" (click)="gotoFirstPage()">
+      <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      Back</ion-button>
     <ion-item>
       <ion-label position="floating">Name</ion-label>
       <ion-input formControlName="name" type="text"></ion-input>
     </ion-item>
-    <ion-note color="danger" *ngIf="getFormControl('name')?.hasError('required')&& getFormControl('brand')?.touched">
+    <ion-note color="danger" *ngIf="getFormControl('name')?.hasError('required')&& getFormControl('name')?.touched">
       El nombre es obligatorio.
     </ion-note>
 
     <ion-item>
-      <ion-label position="floating">day</ion-label>
+      <ion-label position="floating">Day</ion-label>
       <ion-input formControlName="day" type="text"></ion-input>
     </ion-item>
     <ion-note color="danger" *ngIf="getFormControl('day')?.hasError('required')&& getFormControl('day')?.touched">
@@ -30,16 +32,16 @@
     </ion-note>
 
     <ion-item>
-      <ion-label position="floating">time</ion-label>
+      <ion-label position="floating">Time</ion-label>
       <ion-input formControlName="time" type="text"></ion-input>
     </ion-item>
     <ion-note color="danger" *ngIf="getFormControl('time')?.hasError('required')&& getFormControl('time')?.touched">
       La hora es obligatorio.
     </ion-note>
-
-    <ion-button expand="full" type="submit" [disabled]="!appoinmentForm.valid">Add</ion-button>
-
-
+    <ion-button class="top10" shape="round">
+      <ion-icon slot="end" name="person-add"></ion-icon>
+      Add</ion-button>
   </form>
+
 
 </ion-content>

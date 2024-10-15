@@ -1,16 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>my-appoinments</ion-title>
-    
+    <ion-title>Appoinments</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button expand="block" (click)="gotoFirstPage()">Back</ion-button>
+  <ion-button class="top10" shape="round" (click)="gotoFirstPage()">
+    <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+    Back</ion-button>
   <ion-item *ngFor="let a of appoinments">
     <ion-label>
       <h1>{{a.name}}</h1>
-      <p>{{a.day}}</p><p>{{a.time}}</p>
+      <p>{{a.day}}</p>
+      <p>{{a.time}}</p>
       <ion-button (click)="deleteAppoinment(a.id)">delete</ion-button>
       <ion-button (click)="updateAppoinment(a.id)">update</ion-button>
     </ion-label>

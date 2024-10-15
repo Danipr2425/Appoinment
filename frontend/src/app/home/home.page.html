@@ -1,18 +1,80 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Appoinments
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Menu Appoinments</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button class="top10" expand="block" (click)="gotoMyAppoinments()">Show appoinments</ion-button>
+    <ion-button class="top10" expand="block" (click)="goToNewAppoinment()">Create appoinment</ion-button>
+  </ion-content>
+</ion-menu>
 
-  <ion-button expand="block" (click)="gotoMyAppoinments()">Show appoinments</ion-button>
-  <ion-button expand="block" (click)="goToNewAppoinment()">Create appoinment</ion-button>
-</ion-content>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Appoinments <ion-icon name="book-outline" color="medium"></ion-icon></ion-title>
+      <ion-chip slot="end">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-label>Name User</ion-label>
+      </ion-chip>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+
+    <ion-card>
+      <img alt="Imagen inicio" src="assets/img/ImagenIonCard.jpg" />
+      <ion-card-header>
+        <ion-card-title>Appointment manager</ion-card-title>
+        <ion-card-subtitle>Appointment manager</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        With this application you can better control your appointments with your clients.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Next appoinments</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Here you will find this week's quotes.
+      </ion-card-content>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Soon</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Soon</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Soon</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Soon</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Soon</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="top10" expand="block" (click)="gotoMyAppoinments()">Appoinments</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="top10" expand="block" (click)="goToNewAppoinment()">Create</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+  </ion-content>
+</div>
