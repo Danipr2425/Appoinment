@@ -16,11 +16,7 @@ Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para u
 
 Ejecutando las pruebas ⚙️
 Para llevar a cabo las pruebas se utlizó la aplicación de POSTMAN. A continuación varios enlaces para la comprobación:
-GET: http://localhost:8080
-POST: http://localhost:8080/api/appoinments
-GET: http://localhost:8080/api/appoinments
-DEL: http://localhost:8080/api/appoinments/2
-PUT: http://localhost:8080/api/appoinments/1
+https://daniel-1950.postman.co/workspace/Daniel~82d64ffa-7c3b-4a22-8835-a0389ba5cf72/collection/38959236-7aadeb19-e840-4856-9ed5-8a32df8c7eb4?action=share&creator=38959236
 
 
 Analice las pruebas end-to-end 🔩
