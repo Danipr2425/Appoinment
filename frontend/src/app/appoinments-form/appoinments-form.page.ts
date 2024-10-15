@@ -75,5 +75,8 @@ export class AppoinmentsFormPage implements OnInit {
   getFormControl(field: string) {
     return this.appoinmentForm.get(field);
   }
+  gotoFirstPage(){
+    this.route.navigate(["/home"]);
+  }
 
 }

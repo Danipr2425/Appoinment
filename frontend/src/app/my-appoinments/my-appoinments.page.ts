@@ -38,6 +38,9 @@ export class MyAppoinmentsPage implements OnInit {
     this.router.navigate(["/appoinments-form", id]);
   }
 
+  gotoFirstPage(){
+    this.router.navigate(["/home"]);
+  }
 
 }
 
