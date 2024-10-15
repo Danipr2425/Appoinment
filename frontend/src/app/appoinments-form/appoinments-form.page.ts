@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppoinmentService } from '../services/appoinment.service';
-import { getName } from 'ionicons/dist/types/components/icon/utils';
 
 @Component({
   selector: 'app-appoinments-form',
